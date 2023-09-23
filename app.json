@@ -33,7 +33,13 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "@react-native-firebase/app"
-    ]
+      "@react-native-firebase/app",
+      "@react-native-firebase/messaging"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2cfae652-53dd-4616-bdae-223cfdc4b30b"
+      }
+    }
   }
 }

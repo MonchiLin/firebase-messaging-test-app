@@ -8,12 +8,15 @@
     "ios": "expo run:ios",
     "web": "expo start --web",
     "prebuild": "expo prebuild --platform android --clean",
-    "postinstall": "cd node_modules/@react-native-firebase/app && yarn build:plugin"
+    "postinstall": "cd node_modules/@react-native-firebase/app && yarn prepare && cd ../messaging && yarn prepare"
   },
   "dependencies": {
-    "@react-native-firebase/app": "https://gitpkg.now.sh/MonchiLin/react-native-firebase/packages/app?feat-expo-config-notification-icon",
-    "@react-native-firebase/messaging": "https://gitpkg.now.sh/MonchiLin/react-native-firebase/packages/messaging?feat-expo-config-notification-icon",
+    "@react-native-firebase/app": "https://gitpkg.now.sh/MonchiLin/react-native-firebase/packages/app?feat-expo-config-notification-icon-2",
+    "@react-native-firebase/messaging": "https://gitpkg.now.sh/MonchiLin/react-native-firebase/packages/messaging?feat-expo-config-notification-icon-2",
     "expo": "~49.0.11",
+    "expo-constants": "~14.4.2",
+    "expo-device": "~5.4.0",
+    "expo-notifications": "~0.20.1",
     "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
@@ -22,6 +25,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@tsconfig/node12": "^12.1.0",
+    "genversion": "^3.1.1",
     "typescript": "5.1.6"
   },
   "private": true
